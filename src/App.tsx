@@ -1,11 +1,5 @@
-import React from 'react';
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
-import { Home } from './components/Home';
-import { About } from './components/About';
 import { NavMenu } from './components/NavMenu';
+import { MyRoute } from './components/MyRoutes';
 import './App.css';
 
 function App() {
@@ -13,10 +7,7 @@ function App() {
     <div className="App">
       <NavMenu/>
       <div className='content'>
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="about" element={<About />} />
-    </Routes>
+      <MyRoute/>
       </div>
     </div>
   );
