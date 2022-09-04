@@ -7,8 +7,8 @@ import './NavMenu.css';
 export function NavMenu(){
 
   const [collapsed, toggleCollapsed] = useState(true);
-  let navitems = MyAppRoutes.map((item)=>
-  <NavItem><NavLink tag={Link} className="text-dark" to={item.path}>{item.name}</NavLink></NavItem>)
+  let navitems = MyAppRoutes.map((item, index)=>
+  <NavItem key={index}><NavLink tag={Link} className="text-dark" to={item.path}>{item.name}</NavLink></NavItem>)
 
     return (
       <header>
