@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Table, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 import { UserList } from '../data/UserList';
 
+// Next target: 1. Abstract table and pagination feature  2. Import Axios to fetch data
 export function Users() {
     const [pageIndex, setCurrentPage] = useState(1)
 
