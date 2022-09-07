@@ -4,6 +4,6 @@ import { Users } from '../components/Users';
 
 export const MyAppRoutes = [
     { name: "Home", path: "/", element: <Home /> },
-    { name: "About", path: "/about", element: <About /> },
+    { name: "About", path: "/about", element: <About name='Anonymous' /> },
     { name: "Users", path: "/users", element: <Users /> },
   ]

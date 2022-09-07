@@ -1,20 +1,30 @@
 import React, { Component, useState } from 'react';
 
-export class About extends Component {
-  static displayName = About.name;
+interface MeProps {
+  name: string;
+}
 
-  render (){
-	return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>
-          That feels like an existential question, don't you
-          think?
-        </p>
-      </main>
-    </>
-  )
+export class About extends Component<MeProps> {
+  static displayName = About.name;
+  constructor(props: MeProps) {
+    super(props);
+
+    this.state = {
+      name: 'Anonymous',
+    };
   }
+  render() {
+    return (
+      <>
+        <main>
+          <p>{this.props.name}</p>
+          <h2>Who are we?</h2>
+          <p>
+            That feels like an existential question, don't you think?
+          </p>
+        </main>
+      </>
+    )
   }
+}
 
